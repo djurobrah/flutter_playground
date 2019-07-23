@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/HomePage.dart';
+import 'package:flutter_playground/router.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  FluroRouter.defineRoutes();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -12,7 +16,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: HomePage(),
+//      initialRoute: ,
+      onGenerateRoute: FluroRouter.router.generator,
     );
   }
 }
-

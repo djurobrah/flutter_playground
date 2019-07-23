@@ -10,7 +10,12 @@ class FriendsPage extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: Text('Friends page', style: TextStyle(fontSize: 20),),
+        child: Column(
+          children: <Widget>[
+            Text('Friends page', style: TextStyle(fontSize: 20),),
+            RaisedButton(onPressed: () => Navigator.pushNamed(context, 'friend/2'))
+          ],
+        ),
       ),
       backgroundColor: Colors.blue,
     );
